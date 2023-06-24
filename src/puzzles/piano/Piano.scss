@@ -1,0 +1,89 @@
+.piano {
+    --gap: 0.25em;
+    --padding: 50px;
+    --padding-top: 75px;
+
+    position: relative;
+    display: flex; 
+    gap: var(--gap);
+    width: fit-content;
+    margin: 5em auto;
+    padding: var(--padding-top) var(--padding) var(--padding);
+    background: linear-gradient(#232323, #3c3c3c);
+    border-radius: 25px;
+    box-shadow: 0 2em 0 0 #1a1a1a;
+
+    &::before {
+        --strip-height: 10px;
+
+        content: '';
+        position: absolute;
+        top: calc(var(--padding-top) - var(--strip-height));
+        left: var(--padding);
+        height: var(--strip-height);
+        width: calc(100% - (2*var(--padding)));
+        background-color: #530f0f;
+    }
+
+    .scale {
+        position: relative;
+        display: flex;
+        gap: var(--gap);
+        padding-bottom: var(--shadow-height);
+        background-color: #171717;
+
+        --white-key-height: 15em;
+        --black-key-height: 8.75em;
+        --white-key-width: 4.375em;
+        --black-key-width: 2.5em;
+        --shadow-height: 0.5em;
+    }
+
+    &-key {
+        height: var(--white-key-height);
+        width: var(--white-key-width);
+        background-color: #ffffff;
+        border: none;
+        box-shadow: 0 var(--shadow-height) 0 #cccccc;
+
+        &:active {
+            box-shadow: none;
+            transform: translateY(var(--shadow-height));
+        }
+
+        &--black {
+            position: absolute;
+            height: var(--black-key-height);
+            width: var(--black-key-width);
+            background-color: #000000;
+            border: none;
+            box-shadow: 0 var(--shadow-height) 0 #333333;
+            z-index: 1;
+
+            &:nth-of-type(2) {
+                left: calc((1*var(--white-key-width)) - (var(--black-key-width)/2) + (var(--gap)*1));
+            }
+
+            &:nth-of-type(4) {
+                left: calc((2*var(--white-key-width)) - (var(--black-key-width)/2) + (var(--gap)*2));
+            }
+
+            &:nth-of-type(7) {
+                left: calc((4*var(--white-key-width)) - (var(--black-key-width)/2) + (var(--gap)*4));
+            }
+
+            &:nth-of-type(9) {
+                left: calc((5*var(--white-key-width)) - (var(--black-key-width)/2) + (var(--gap)*5));
+            }
+
+            &:nth-of-type(11) {
+                left: calc((6*var(--white-key-width)) - (var(--black-key-width)/2) + (var(--gap)*6));
+            }
+
+            &:active {
+                transform: none;
+                height: calc(var(--black-key-height) + var(--shadow-height));
+            }
+        }
+    }
+}
