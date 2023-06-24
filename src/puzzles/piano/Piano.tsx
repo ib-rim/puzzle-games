@@ -10,7 +10,7 @@ export default function Piano() {
         let currentGuess: string = guess + note;
         if (password.slice(0, currentGuess.length) === currentGuess) {
             if (password === currentGuess) {
-                console.log("WINNER");
+                alert("WINNER");
             }
             setGuess(currentGuess);
         }
