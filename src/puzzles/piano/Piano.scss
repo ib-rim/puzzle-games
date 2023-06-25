@@ -1,28 +1,80 @@
 .piano {
-    --gap: 0.25em;
     --padding: 50px;
-    --padding-top: 75px;
 
-    position: relative;
-    display: flex; 
-    gap: var(--gap);
     width: fit-content;
     margin: 5em auto;
-    padding: var(--padding-top) var(--padding) var(--padding);
+    padding: var(--padding) var(--padding) var(--padding);
     background: linear-gradient(#232323, #3c3c3c);
     border-radius: 25px;
     box-shadow: 0 2em 0 0 #1a1a1a;
 
-    &::before {
+    .label-toggle {
+        position: relative;
+        margin-bottom: 3em;
+        width: 1.5em;
+        height: 1.5em;
+        border: none;
+        background: linear-gradient(#1d1d1d, #373737);
+        border-radius: 100%;
+        cursor: pointer;
+
+        &::before {
+            content: 'Toggle Labels';
+            position: absolute;
+            inset: -1em 0 0 3em;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            color: #bebebe;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: hsl(0, 0%, 12%);
+            width: 1em;
+            height: 1em;
+            inset: 0;
+            margin: auto;
+            border-radius: 100%;
+            box-shadow: 0 2px 2px 2px #000000;
+        }
+
+        &:active::after {
+            box-shadow: 0 1px 1px 1px #000000;
+        }
+    }
+
+    .toggle-light {
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 100%;
+        margin-left: 0.5em;
+        background-color: #2f0404;
+        transition: 0.3s ease-in-out;
+    }
+
+    .toggle-light[data-state="on"] {
+        background-color: #e91616;
+    }
+
+    .keys {
+        --gap: 0.25em;
         --strip-height: 10px;
 
-        content: '';
-        position: absolute;
-        top: calc(var(--padding-top) - var(--strip-height));
-        left: var(--padding);
-        height: var(--strip-height);
-        width: calc(100% - (2*var(--padding)));
-        background-color: #530f0f;
+        display: flex;
+        gap: var(--gap);
+        position: relative;
+
+        //Felt strip
+        &::before {
+
+            content: '';
+            position: absolute;
+            top: calc(-1 * var(--strip-height));
+            height: var(--strip-height);
+            width: 100%;
+            background-color: #530f0f;
+        }
     }
 
     .scale {
@@ -45,6 +97,8 @@
         background-color: #ffffff;
         border: none;
         box-shadow: 0 var(--shadow-height) 0 #cccccc;
+        padding-top: calc(var(--white-key-height) - var(--shadow-height) - 2em);
+        transition: 0.1s;
 
         &:active {
             box-shadow: none;
@@ -53,8 +107,10 @@
 
         &--black {
             position: absolute;
+            color: #ffffff;
             height: var(--black-key-height);
             width: var(--black-key-width);
+            padding-top: calc(var(--black-key-height) - var(--shadow-height) - 2em);
             background-color: #000000;
             border: none;
             box-shadow: 0 var(--shadow-height) 0 #333333;

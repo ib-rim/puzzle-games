@@ -29,6 +29,7 @@ export default function Piano() {
 
     const [password] = useState<string>("DEAFBED");
     const [guess, setGuess] = useState<string | undefined>("");
+    const [showLabel, setShowLabel] = useState(false);
 
     const notes: { [note: string]: HTMLAudioElement } = {
         "A3": new Audio(A3),
@@ -84,33 +85,39 @@ export default function Piano() {
     return (
         <>
             <div className="piano">
-                <div className="scale">
-                    <button onMouseDown={() => playNote("C3")} onClick={() => handleKeyPress("C")} className="piano-key" />
-                    <button onMouseDown={() => playNote("Db3")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black" />
-                    <button onMouseDown={() => playNote("D3")} onClick={() => handleKeyPress("D")} className="piano-key" />
-                    <button onMouseDown={() => playNote("Eb3")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black" />
-                    <button onMouseDown={() => playNote("E3")} onClick={() => handleKeyPress("E")} className="piano-key" />
-                    <button onMouseDown={() => playNote("F3")} onClick={() => handleKeyPress("F")} className="piano-key" />
-                    <button onMouseDown={() => playNote("Gb3")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black" />
-                    <button onMouseDown={() => playNote("G3")} onClick={() => handleKeyPress("G")} className="piano-key" />
-                    <button onMouseDown={() => playNote("Ab3")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black" />
-                    <button onMouseDown={() => playNote("A3")} onClick={() => handleKeyPress("A")} className="piano-key" />
-                    <button onMouseDown={() => playNote("Bb3")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black" />
-                    <button onMouseDown={() => playNote("B3")} onClick={() => handleKeyPress("B")} className="piano-key" />
-                </div>
-                <div className="scale">
-                    <button onMouseDown={() => playNote("C4")} onClick={() => handleKeyPress("C")} className="piano-key" />
-                    <button onMouseDown={() => playNote("Db4")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black" />
-                    <button onMouseDown={() => playNote("D4")} onClick={() => handleKeyPress("D")} className="piano-key" />
-                    <button onMouseDown={() => playNote("Eb4")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black" />
-                    <button onMouseDown={() => playNote("E4")} onClick={() => handleKeyPress("E")} className="piano-key" />
-                    <button onMouseDown={() => playNote("F4")} onClick={() => handleKeyPress("F")} className="piano-key" />
-                    <button onMouseDown={() => playNote("Gb4")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black" />
-                    <button onMouseDown={() => playNote("G4")} onClick={() => handleKeyPress("G")} className="piano-key" />
-                    <button onMouseDown={() => playNote("Ab4")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black" />
-                    <button onMouseDown={() => playNote("A4")} onClick={() => handleKeyPress("A")} className="piano-key" />
-                    <button onMouseDown={() => playNote("Bb4")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black" />
-                    <button onMouseDown={() => playNote("B4")} onClick={() => handleKeyPress("B")} className="piano-key" />
+                <div className="toggle-light" data-state={showLabel ? "on" : "off"} />
+                <button onClick={() => setShowLabel(!showLabel)} className="label-toggle">
+                    <span className="sr-only">Toggle Labels</span>
+                </button>
+                <div className="keys">
+                    <div className="scale">
+                        <button onMouseDown={() => playNote("C3")} onClick={() => handleKeyPress("C")} className="piano-key">{showLabel ? "C" : ""}</button>
+                        <button onMouseDown={() => playNote("Db3")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black">{showLabel ? "Db" : ""}</button>
+                        <button onMouseDown={() => playNote("D3")} onClick={() => handleKeyPress("D")} className="piano-key">{showLabel ? "D" : ""}</button>
+                        <button onMouseDown={() => playNote("Eb3")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black">{showLabel ? "Eb" : ""}</button>
+                        <button onMouseDown={() => playNote("E3")} onClick={() => handleKeyPress("E")} className="piano-key">{showLabel ? "E" : ""}</button>
+                        <button onMouseDown={() => playNote("F3")} onClick={() => handleKeyPress("F")} className="piano-key">{showLabel ? "F" : ""}</button>
+                        <button onMouseDown={() => playNote("Gb3")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black">{showLabel ? "Gb" : ""}</button>
+                        <button onMouseDown={() => playNote("G3")} onClick={() => handleKeyPress("G")} className="piano-key">{showLabel ? "G" : ""}</button>
+                        <button onMouseDown={() => playNote("Ab3")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black">{showLabel ? "Ab" : ""}</button>
+                        <button onMouseDown={() => playNote("A3")} onClick={() => handleKeyPress("A")} className="piano-key">{showLabel ? "A" : ""}</button>
+                        <button onMouseDown={() => playNote("Bb3")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black">{showLabel ? "Bb" : ""}</button>
+                        <button onMouseDown={() => playNote("B3")} onClick={() => handleKeyPress("B")} className="piano-key">{showLabel ? "B" : ""}</button>
+                    </div>
+                    <div className="scale">
+                        <button onMouseDown={() => playNote("C4")} onClick={() => handleKeyPress("C")} className="piano-key">{showLabel ? "C" : ""}</button>
+                        <button onMouseDown={() => playNote("Db4")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black">{showLabel ? "Db" : ""}</button>
+                        <button onMouseDown={() => playNote("D4")} onClick={() => handleKeyPress("D")} className="piano-key">{showLabel ? "D" : ""}</button>
+                        <button onMouseDown={() => playNote("Eb4")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black">{showLabel ? "Eb" : ""}</button>
+                        <button onMouseDown={() => playNote("E4")} onClick={() => handleKeyPress("E")} className="piano-key">{showLabel ? "E" : ""}</button>
+                        <button onMouseDown={() => playNote("F4")} onClick={() => handleKeyPress("F")} className="piano-key">{showLabel ? "F" : ""}</button>
+                        <button onMouseDown={() => playNote("Gb4")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black">{showLabel ? "Gb" : ""}</button>
+                        <button onMouseDown={() => playNote("G4")} onClick={() => handleKeyPress("G")} className="piano-key">{showLabel ? "G" : ""}</button>
+                        <button onMouseDown={() => playNote("Ab4")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black">{showLabel ? "Ab" : ""}</button>
+                        <button onMouseDown={() => playNote("A4")} onClick={() => handleKeyPress("A")} className="piano-key">{showLabel ? "A" : ""}</button>
+                        <button onMouseDown={() => playNote("Bb4")} onClick={() => handleKeyPress(" ")} className="piano-key piano-key--black">{showLabel ? "Bb" : ""}</button>
+                        <button onMouseDown={() => playNote("B4")} onClick={() => handleKeyPress("B")} className="piano-key">{showLabel ? "B" : ""}</button>
+                    </div>
                 </div>
             </div>
         </>
