@@ -2,7 +2,7 @@
     --padding: 50px;
 
     width: fit-content;
-    margin: 5em auto;
+    margin: 1em auto;
     padding: var(--padding) var(--padding) var(--padding);
     background: linear-gradient(#232323, #3c3c3c);
     border-radius: 25px;
@@ -142,4 +142,16 @@
             }
         }
     }
+}
+
+.clues {
+    display: flex;
+    gap: 2em;
+    width: fit-content;
+    margin: 0 auto;
+    .clue {
+        width: 10em;
+        height: 10em;
+    }
+
 }

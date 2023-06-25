@@ -24,6 +24,8 @@ import G3 from './assets/mp3/G3.mp3';
 import G4 from './assets/mp3/G4.mp3';
 import Gb3 from './assets/mp3/Gb3.mp3';
 import Gb4 from './assets/mp3/Gb4.mp3';
+import deaf from './assets/img/deaf.png';
+import bed from './assets/img/bed.png';
 
 export default function Piano() {
 
@@ -84,6 +86,10 @@ export default function Piano() {
 
     return (
         <>
+            <div className="clues">
+                <img src={deaf} alt="Clue 1: Deaf" className="clue" />
+                <img src={bed} alt="Clue 2: Bed" className="clue" />
+            </div>
             <div className="piano">
                 <div className="toggle-light" data-state={showLabel ? "on" : "off"} />
                 <button onClick={() => setShowLabel(!showLabel)} className="label-toggle">
