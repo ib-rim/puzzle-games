@@ -29,7 +29,6 @@ export default function Piano() {
 
     const [password] = useState<string>("DEAFBED");
     const [guess, setGuess] = useState<string | undefined>("");
-    const [previousNote, setPreviousNote] = useState<HTMLAudioElement | undefined>();
 
     const notes: { [note: string]: HTMLAudioElement } = {
         "A3": new Audio(A3),
