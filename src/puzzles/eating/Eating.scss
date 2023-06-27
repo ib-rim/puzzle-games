@@ -1,5 +1,6 @@
 .mouth {
-    position: relative;
+    transform: translate(-50%, -50%);
+    position: absolute;
     display: flex;
     flex-direction: column;
     // margin: 0 auto;
@@ -8,8 +9,8 @@
     // background-color: rgb(102, 5, 5);
     border-radius: 0 0 20em 20em;
     overflow: hidden;
-    border: 10px solid black;
-    box-shadow: 0px 3px 3px #6e6e6e;
+    box-shadow: 1px 1px 0px 500vw #171717;
+    pointer-events: none;
 }
 
 .teeth {
@@ -103,5 +104,20 @@
                 height: 60%;
             }
         }
+    }
+}
+
+.room {
+    height: 100vh;
+    height: 100dvh;
+}
+
+.chompAnimation {
+    animation: chomp 1s 1;
+}
+
+@keyframes chomp {
+    50% {
+        height: 95%;
     }
 }
