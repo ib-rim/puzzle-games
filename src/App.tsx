@@ -12,6 +12,7 @@ function App() {
 
     return (
         <div className="App">
+            <div className="puzzle-num">Puzzle: {currentPuzzle + 1}/{puzzles.length}</div>
             {puzzles[currentPuzzle]}
         </div>
     );

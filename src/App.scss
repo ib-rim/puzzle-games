@@ -84,3 +84,15 @@ select {
     height: 1px;
     overflow: hidden;
 }
+
+.puzzle-num {
+    position: fixed;
+    top: 1em;
+    z-index: 1;
+    height: fit-content;
+    width: fit-content;
+    padding: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
