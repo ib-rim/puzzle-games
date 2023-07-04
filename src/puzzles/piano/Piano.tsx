@@ -27,7 +27,7 @@ import Gb4 from './assets/mp3/Gb4.mp3';
 import deaf from './assets/img/deaf.png';
 import bed from './assets/img/bed.png';
 
-export default function Piano() {
+export default function Piano(props : {handleSolved : () => void}) {
 
     const [password] = useState<string>("DEAFBED");
     const [guess, setGuess] = useState<string | undefined>("");
@@ -70,7 +70,9 @@ export default function Piano() {
         let currentGuess: string = guess + note;
         if (password.slice(0, currentGuess.length) === currentGuess) {
             if (password === currentGuess) {
-                alert("WINNER");
+                setTimeout(() => {
+                    props.handleSolved();
+                }, 750)
             }
             setGuess(currentGuess);
         }

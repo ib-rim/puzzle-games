@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './Eating.scss'
 
-export default function Eating() {
+export default function Eating(props : {handleSolved : () => void}) {
 
     const [mousePosition, setMousePosition] = useState<{ [pos: string]: Number }>({
         "x": 0,
