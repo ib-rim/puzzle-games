@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import './Eating.scss'
-import { toContainHTML } from '@testing-library/jest-dom/matchers'
 
 export default function Eating() {
 
