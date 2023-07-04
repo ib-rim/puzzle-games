@@ -110,6 +110,46 @@
 .room {
     height: 100vh;
     height: 100dvh;
+    background: radial-gradient(hsl(100, 28%, 37%), hsl(100, 28%, 17%));
+}
+
+.table {
+    background: radial-gradient(#dc824c, #7f5134);
+    box-shadow: 15px 20px 9px 0px #00000059;
+    border-bottom: 9px solid #442b1c;
+    border-right: 9px solid #5c3a26;
+    border-radius: 9px;
+    height: 300px;
+    width: 150px;
+    margin: 1em auto;
+    transform: rotate(60deg);
+
+    >* {
+        transform: rotate(-90deg);
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        box-shadow: 3px 3px 1px 0px #00000059;
+        border-bottom: 6px solid #442b1c;
+        border-right: 6px solid #5c3a26;
+        border-radius: 9px;
+        height: 95%;
+        width: 50px;
+        bottom: 0;
+        right: 150px;
+        background-color: #7f5134;
+    }
+
+    &::before {
+        right: 145px;
+    }
+
+    &::after {
+        right: -70px;
+    }
 }
 
 .chompAnimation {
@@ -120,4 +160,54 @@
     50% {
         height: 95%;
     }
+}
+
+.burger {
+    height: 30px;
+    width: 30px;
+    box-shadow:
+        1px 2px 0px 0px green,
+        0px 5px 0px -1px gold,
+        0px 6px 0px 0px maroon,
+        0px 7px 0px 0px green,
+        0px 9px 0px 0px goldenrod,
+        -1px 13px 1px 0px #00000059,
+    ;
+    border-radius: 100%;
+    background: radial-gradient(hsl(43, 74%, 49%), hsl(43, 74%, 35%));
+
+    &--rotten {
+        background: radial-gradient(hsl(68, 34%, 49%), hsl(68, 34%, 35%));
+    }
+
+    &--cheeseless {
+        box-shadow:
+            1px 2px 0px 0px green,
+            0px 5px 0px 0px maroon,
+            0px 6px 0px 0px green,
+            0px 8px 0px 0px goldenrod,
+            0px 11px 1px 0px #00000059,
+        ;
+    }
+
+    &--plain {
+        box-shadow:
+            0px 3px 0px 0px maroon,
+            0px 5px 0px 0px goldenrod,
+            0px 8px 1px 0px #00000059,
+        ;
+    }
+}
+
+.blanket {
+    margin-left: 5em;
+    height: 250px;
+    width: 250px;
+    background:
+        repeating-linear-gradient(180deg, #ff080080,
+            #ff080080 5%, #ffffff90 5%, #ffffff90 10%),
+        repeating-linear-gradient(90deg, #ff080080,
+        #ff080080 5%, #ffffff90 5%, #ffffff90 10%);
+
+    box-shadow: -3px 2px 2px 0px #00000059;
 }

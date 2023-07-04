@@ -36,6 +36,14 @@ export default function Eating() {
 
     return (
         <div className="room" onClick={() => mouthChomp()}>
+            <br />
+            <div className="table">
+                <div className="burger" />
+                <div className="burger burger--rotten" />
+                <div className="burger burger--cheeseless" />
+                <div className="burger burger--plain" />
+            </div>
+            <div className="blanket"></div>
             <div ref={mouthElem} className="mouth">
                 <div className="teeth teeth--top">
                     <div className={`tooth ${toothAnimation}`} />
