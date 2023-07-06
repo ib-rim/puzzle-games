@@ -298,6 +298,16 @@
         repeating-conic-gradient(#800000 0 25%, #800000 0 50%) 0 0/calc(2*var(--s)) calc(2*var(--s));
 }
 
+.plate-stack {
+    transform: rotate(90deg);
+    display: grid;
+    grid-auto-rows: 3px;
+    
+    .plate {
+        box-shadow: 1px -3px 5px 0px #00000059;
+    }
+}
+
 .plate {
     height: 45px;
     width: 45px;
