@@ -114,6 +114,8 @@
 }
 
 .table {
+    display: flex;
+    flex-wrap: wrap;
     background: radial-gradient(#dc824c, #7f5134);
     box-shadow: 15px 20px 9px 0px #00000059;
     border-bottom: 9px solid #442b1c;
@@ -201,6 +203,8 @@
 }
 
 .blanket {
+    display: flex;
+    flex-wrap: wrap;
     margin-left: 5em;
     height: 250px;
     width: 250px;
