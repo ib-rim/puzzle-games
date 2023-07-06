@@ -206,11 +206,11 @@
     width: 30px;
     box-shadow:
         1px 2px 0px 0px green,
-        0px 5px 0px -1px gold,
-        0px 6px 0px 0px maroon,
-        0px 7px 0px 0px green,
-        0px 9px 0px 0px goldenrod,
-        -2px 13px 1px 0px #00000059,
+        0px 3px 0px 0px gold,
+        0px 5px 0px 0px maroon,
+        0px 6px 0px 0px green,
+        0px 8px 0px 0px goldenrod,
+        -2px 11px 1px 0px #00000059,
     ;
     border-radius: 100%;
     background: radial-gradient(hsl(43, 74%, 49%), hsl(43, 74%, 35%));
@@ -222,9 +222,9 @@
     &--cheeseless {
         box-shadow:
             1px 2px 0px 0px green,
-            0px 5px 0px 0px maroon,
-            0px 6px 0px 0px green,
-            0px 8px 0px 0px goldenrod,
+            0px 3px 0px 0px maroon,
+            0px 5px 0px 0px green,
+            0px 7px 0px 0px goldenrod,
             -2px 11px 1px 0px #00000059,
         ;
     }
