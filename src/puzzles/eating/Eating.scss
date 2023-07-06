@@ -217,3 +217,60 @@
 
     box-shadow: -3px 2px 2px 0px #00000059;
 }
+
+.pie {
+    margin: 1em;
+    height: 50px;
+    width: 50px;
+    background:
+        repeating-linear-gradient(160deg, #e28c13ee,
+            #e28c13ee 9%, transparent 9%, transparent 18%),
+        repeating-linear-gradient(70deg, #e28c13ee,
+            #e28c13ee 9%, #1b1c49 9%, #1b1c49 18%);
+    background-repeat: no-repeat;
+    box-shadow:
+        inset 0px 0px 0px 1px #49494959,
+        0px 0px 0px 1px #cfcfcf,
+        -1px 1px 1px 2px #00000059;
+    border-radius: 100%;
+    border: 3px solid #bc7410ee;
+
+    &--strawberry {
+        background:
+            repeating-linear-gradient(160deg, #e28c13ee,
+                #e28c13ee 9%, transparent 9%, transparent 18%),
+            repeating-linear-gradient(70deg, #e28c13ee,
+                #e28c13ee 9%, #6b1313ee 9%, #6b1313ee 18%);
+    }
+}
+
+.pizza {
+    margin: 1em;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    box-shadow:
+        inset 0px 0px 0px 1px #49494959,
+        0px 0px 0px 4px #ce8d31,
+        -1px 1px 1px 5px #00000059;
+
+    --s: 11px;
+    /* control the size */
+
+    --_s: 0 0/var(--s) var(--s);
+    background:
+        radial-gradient(#0000 50%, #0002 54%, #daa520 50%) var(--_s),
+        repeating-conic-gradient(#800000 0 25%, #800000 0 50%) 0 0/calc(2*var(--s)) calc(2*var(--s));
+}
+
+.plate {
+    height: 45px;
+    width: 45px;
+    background: radial-gradient(#ffffff, #ebebeb);
+    border-radius: 100%;
+    box-shadow: -3px 2px 2px 0px #00000059;
+
+    .burger {
+        margin: -0.25em 0.5em;
+    }
+}
