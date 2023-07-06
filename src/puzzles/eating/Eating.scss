@@ -250,8 +250,7 @@
             #ff080080 5%, #ffffff90 5%, #ffffff90 10%),
         repeating-linear-gradient(90deg, #ff080080,
             #ff080080 5%, #ffffff90 5%, #ffffff90 10%);
-    
-            box-shadow: -3px 2px 2px 0px #00000059;
+    box-shadow: -3px 2px 2px 0px #00000059;
 }
 
 .pie {
@@ -304,6 +303,7 @@
     width: 45px;
     background: radial-gradient(#ffffff, #ebebeb);
     border-radius: 100%;
+    border: 3px solid lightblue;
     box-shadow: -3px 2px 2px 0px #00000059;
 
     .burger {
