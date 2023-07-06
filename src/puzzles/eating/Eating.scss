@@ -302,7 +302,7 @@
     transform: rotate(90deg);
     display: grid;
     grid-auto-rows: 3px;
-    
+
     .plate {
         box-shadow: 1px -3px 5px 0px #00000059;
     }
@@ -318,5 +318,59 @@
 
     .burger {
         margin: -0.25em 0.5em;
+    }
+}
+
+.jug {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    border: 3px solid rgba(195, 213, 219, 0.9);
+    box-shadow:
+        -2px 4px 0px 1px rgba(195, 213, 219, 0.9),
+        -4px 5px 2px 2px #00000059;
+
+    &--water {
+        background: radial-gradient(#87cefa, #59acdf);
+
+        &::before {
+            background-color: #59acdf;
+        }
+    }
+
+    &--juice {
+        background: radial-gradient(#f2be35, #e49604);
+
+        &::before {
+            background-color: #e49604;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 8px;
+        width: 7px;
+        border: 2px solid rgba(195, 213, 219);
+        border-top: 1px solid rgba(195, 213, 219);
+        border-bottom: 1px solid rgba(195, 213, 219);
+        border-right: none;
+        top: 35%;
+        left: -6px;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 8px;
+        width: 12px;
+        background-color: rgba(195, 213, 219, 0.9);
+        top: 35%;
+        right: -12px;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
     }
 }
