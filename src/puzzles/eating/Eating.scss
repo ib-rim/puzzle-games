@@ -304,7 +304,11 @@
     grid-auto-rows: 3px;
 
     .plate {
-        box-shadow: 1px -3px 5px 0px #00000059;
+        box-shadow: 1px -1px 5px 0px #00000059;
+
+        &:first-child {
+            box-shadow: 5px -10px 5px 0px #00000059;
+        }
     }
 }
 
@@ -322,6 +326,7 @@
 }
 
 .jug {
+    margin: 1em;
     position: relative;
     height: 30px;
     width: 30px;
@@ -329,7 +334,7 @@
     border: 3px solid rgba(195, 213, 219, 0.9);
     box-shadow:
         -2px 4px 0px 1px rgba(195, 213, 219, 0.9),
-        -4px 5px 2px 2px #00000059;
+        -5px 7px 2px 2px #00000059;
 
     &--water {
         background: radial-gradient(#87cefa, #59acdf);
@@ -376,6 +381,7 @@
 }
 
 .glass {
+    margin: 0.5em;
     position: relative;
     height: 20px;
     width: 20px;
