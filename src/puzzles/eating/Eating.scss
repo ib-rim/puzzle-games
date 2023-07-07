@@ -298,6 +298,19 @@
         repeating-conic-gradient(#800000 0 25%, #800000 0 50%) 0 0/calc(2*var(--s)) calc(2*var(--s));
 }
 
+.brownie {
+    margin: 1em;
+    height: 20px;
+    width: 20px;
+    background: #513b35;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 4px solid #281510;
+    border-bottom: 4px solid #281510;
+    box-shadow:
+        -1px 1px 1px 1px #00000059;
+}
+
 .plate-stack {
     transform: rotate(90deg);
     display: grid;
@@ -322,6 +335,10 @@
 
     .burger {
         margin: -0.25em 0.5em;
+    }
+
+    .brownie {
+        margin: -0.05em 0.5em;
     }
 }
 
