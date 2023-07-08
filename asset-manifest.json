@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/puzzle-games/static/css/main.45ce01e7.css",
-    "main.js": "/puzzle-games/static/js/main.f76ae51f.js",
+    "main.css": "/puzzle-games/static/css/main.59c66177.css",
+    "main.js": "/puzzle-games/static/js/main.bd89361a.js",
     "static/js/787.19a1da23.chunk.js": "/puzzle-games/static/js/787.19a1da23.chunk.js",
     "static/media/deaf.png": "/puzzle-games/static/media/deaf.3956088c296051e7048c.png",
     "static/media/A3.mp3": "/puzzle-games/static/media/A3.0c5abb13a4009fd67d57.mp3",
@@ -29,12 +29,12 @@
     "static/media/Gb3.mp3": "/puzzle-games/static/media/Gb3.1a91aa6c276f5430dce0.mp3",
     "static/media/Gb4.mp3": "/puzzle-games/static/media/Gb4.509ed7fc14ce1638d601.mp3",
     "index.html": "/puzzle-games/index.html",
-    "main.45ce01e7.css.map": "/puzzle-games/static/css/main.45ce01e7.css.map",
-    "main.f76ae51f.js.map": "/puzzle-games/static/js/main.f76ae51f.js.map",
+    "main.59c66177.css.map": "/puzzle-games/static/css/main.59c66177.css.map",
+    "main.bd89361a.js.map": "/puzzle-games/static/js/main.bd89361a.js.map",
     "787.19a1da23.chunk.js.map": "/puzzle-games/static/js/787.19a1da23.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.45ce01e7.css",
-    "static/js/main.f76ae51f.js"
+    "static/css/main.59c66177.css",
+    "static/js/main.bd89361a.js"
   ]
 }
