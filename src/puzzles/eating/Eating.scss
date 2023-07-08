@@ -111,11 +111,82 @@
     height: 100vh;
     height: 100dvh;
     background: radial-gradient(hsl(100, 28%, 37%), hsl(100, 28%, 17%));
+
+    //Positioning all elements
+
+    //Top table
+    &>.table:nth-child(1) {
+        position: absolute;
+        inset: 2em 0 0 25em;
+        display: grid;
+        grid-template-columns: auto auto;
+
+        &>.plate {
+            justify-self: center;
+        }
+
+        //Top glasses
+        &>.glass:nth-child(odd) {
+            justify-self: center;
+        }
+
+        //Top right glass
+        &>:nth-child(1) {
+            align-self: end;
+        }
+
+        //Bottom right glass
+        &>:nth-child(2) {
+            align-self: center;
+        }
+
+        //Bottom left glass
+        &>:nth-of-type(6) {
+            align-self: center;
+        }
+
+        //Top left burger
+        &>:nth-child(5) {
+            align-self: end;
+        }
+
+        //Top left glass
+        &>:nth-child(7) {
+            align-self: center;
+        }
+    }
+
+    //Bottom table
+    &>:nth-child(2) {
+        position: absolute;
+        inset: 22em 0 0 37em;
+        display: grid;
+        grid-template-columns: auto auto;
+
+        //Bottom left glass
+        &>:nth-of-type(6) {
+            align-self: end;
+        }
+    }
+
+    //Blanket
+    &>:nth-child(3) {
+        position: absolute;
+        inset: 25em 0 0 3em;
+        display: flex;
+        flex-wrap: wrap;
+
+        >* {
+            margin: 1em;
+        }
+
+        .plate-stack {
+            transform: rotate(200deg);
+        }
+    }
 }
 
 .table {
-    display: flex;
-    flex-wrap: wrap;
     background: radial-gradient(#dc824c, #7f5134);
     box-shadow: 15px 20px 9px 0px #00000059;
     border-bottom: 9px solid #442b1c;
@@ -123,7 +194,6 @@
     border-radius: 9px;
     height: 300px;
     width: 150px;
-    margin: 1em auto;
     transform: rotate(60deg);
 
     >* {
@@ -239,8 +309,6 @@
 }
 
 .blanket {
-    display: flex;
-    flex-wrap: wrap;
     transform: rotate(-30deg);
     margin-left: 5em;
     height: 250px;

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './Eating.scss'
 
-export default function Eating(props : {handleSolved : () => void}) {
+export default function Eating(props: { handleSolved: () => void }) {
 
     const [mousePosition, setMousePosition] = useState<{ [pos: string]: Number }>({
         "x": 0,
@@ -36,14 +36,55 @@ export default function Eating(props : {handleSolved : () => void}) {
 
     return (
         <div className="room" onClick={() => mouthChomp()}>
-            <br />
             <div className="table">
-                <div className="burger" />
-                <div className="burger burger--rotten" />
-                <div className="burger burger--cheeseless" />
-                <div className="burger burger--plain" />
+                <div className="glass glass--water"></div>
+                <div className="glass glass--water"></div>
+                <div className="plate">
+                    <div className="burger" />
+                </div>
+                <div className="plate">
+                    <div className="burger burger--rotten" />
+                </div>
+                <div className="plate">
+                    <div className="burger burger--cheeseless" />
+                </div>
+                <div className="glass glass--water"></div>
+                <div className="glass glass--water"></div>
+                <div className="plate">
+                    <div className="burger burger--plain" />
+                </div>
             </div>
-            <div className="blanket"></div>
+            <div className="table">
+                <div className="plate">
+                    <div className="burger" />
+                </div>
+                <div className="glass glass--juice"></div>
+                <div className="glass glass--water"></div>
+                <div className="plate">
+                    <div className="burger burger--plain" />
+                </div>
+                <div className="jug jug--juice" />
+                <div className="glass glass--juice"></div>
+                <div className="pizza" />
+                <div className="plate">
+                    <div className="brownie" />
+                    <div className="brownie" />
+                </div>
+            </div>
+            <div className="blanket">
+                <div className="pie pie--strawberry" />
+                <div className="plate-stack">
+                    <div className="plate" />
+                    <div className="plate" />
+                    <div className="plate" />
+                    <div className="plate" />
+                    <div className="plate" />
+                    <div className="plate" />
+                </div>
+                <div className="pie" />
+                <div className="basket" />
+                <div className="jug jug--water" />
+            </div>
             <div ref={mouthElem} className="mouth">
                 <div className="teeth teeth--top">
                     <div className={`tooth ${toothAnimation}`} />
