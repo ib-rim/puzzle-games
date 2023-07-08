@@ -37,42 +37,42 @@ export default function Eating(props: { handleSolved: () => void }) {
     return (
         <div className="room" onClick={() => mouthChomp()}>
             <div className="table">
-                <div className="glass glass--water"></div>
-                <div className="glass glass--water"></div>
+                <button className="glass glass--water" />
+                <button className="glass glass--water" />
                 <div className="plate">
-                    <div className="burger" />
+                    <button className="burger" />
                 </div>
                 <div className="plate">
-                    <div className="burger burger--rotten" />
+                    <button className="burger burger--rotten" />
                 </div>
                 <div className="plate">
-                    <div className="burger burger--cheeseless" />
+                    <button className="burger burger--cheeseless" />
                 </div>
-                <div className="glass glass--water"></div>
-                <div className="glass glass--water"></div>
+                <button className="glass glass--water" />
+                <button className="glass glass--water" />
                 <div className="plate">
-                    <div className="burger burger--plain" />
+                    <button className="burger burger--plain" />
                 </div>
             </div>
             <div className="table">
                 <div className="plate">
-                    <div className="burger" />
+                    <button className="burger" />
                 </div>
-                <div className="glass glass--juice"></div>
-                <div className="glass glass--water"></div>
+                <button className="glass glass--juice" />
+                <button className="glass glass--water" />
                 <div className="plate">
-                    <div className="burger burger--plain" />
+                    <button className="burger burger--plain" />
                 </div>
-                <div className="jug jug--juice" />
-                <div className="glass glass--juice"></div>
-                <div className="pizza" />
+                <button className="jug jug--juice" />
+                <button className="glass glass--juice" />
+                <button className="pizza" />
                 <div className="plate">
-                    <div className="brownie" />
-                    <div className="brownie" />
+                    <button className="brownie" />
+                    <button className="brownie" />
                 </div>
             </div>
             <div className="blanket">
-                <div className="pie pie--strawberry" />
+                <button className="pie pie--strawberry" />
                 <div className="plate-stack">
                     <div className="plate" />
                     <div className="plate" />
@@ -81,11 +81,11 @@ export default function Eating(props: { handleSolved: () => void }) {
                     <div className="plate" />
                     <div className="plate" />
                 </div>
-                <div className="pie" />
+                <button className="pie" />
                 <div className="basket" />
-                <div className="jug jug--water" />
+                <button className="jug jug--water" />
             </div>
-            <div ref={mouthElem} className="mouth">
+            {/* <div ref={mouthElem} className="mouth">
                 <div className="teeth teeth--top">
                     <div className={`tooth ${toothAnimation}`} />
                     <div className={`tooth ${toothAnimation}`} />
@@ -106,7 +106,7 @@ export default function Eating(props: { handleSolved: () => void }) {
                     <div className={`tooth ${toothAnimation}`} />
                     <div className={`tooth ${toothAnimation}`} />
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
